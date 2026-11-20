@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="language" content="en">
+    <meta name="title" content="Forever Yours | S.N.ovi">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Great+Vibes&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/love.css">
+    <title>Forever Yours — S.N.Ovi</title>
+</head>
+
+<body>
+
+    <!-- Ambient background & canvases -->
+    <div class="ambient" aria-hidden="true">
+        <div class="ambient-glow"></div>
+        <canvas id="particles"></canvas>
+        <canvas id="firing-canvas"></canvas>
+    </div>
+
+    <!-- Floating hearts layer -->
+    <div class="floating-hearts" aria-hidden="true"></div>
+
+    <!-- Music Control -->
+    <button id="music-toggle" class="music-btn" title="Play Romantic Music" aria-label="Toggle Romantic Music">
+        <span class="music-icon">🎵</span>
+        <span class="music-text">Play Music</span>
+    </button>
+    <audio id="bg-music" loop preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=romantic-piano-112189.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="container" onselectstart="return false;" unselectable="on" style="-moz-user-select:none;">
+
+        <!-- Shooter GIF with interactive hint -->
+        <div class="body_left" id="shooter-container" title="Click to shoot love!">
+            <div class="fire-hint" id="fire-hint">
+                <span class="pulse-sparkle">💖</span>
+                <span class="hint-text">Click me to shoot love!</span>
+                <div class="hint-arrow"></div>
+            </div>
+            <img src="images/biubiubiu.gif" id="shooter-gif" alt="Shooter GIF" ondragstart="return false;">
+        </div>
+
+        <!-- Heart construction container -->
+        <div class="body_center love" id="heart-container">
+            <div class="block">
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+                <div class="div4"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="border">
+            <div class="border-top"></div>
+            <div class="border-bottom"></div>
+        </div>
+    </div>
+
+    <div class="title-wrap">
+        <p class="title-sub">with all my heart</p>
+        <h1 class="title">I Love You</h1>
+        <p class="title-accent">forever &amp; always</p>
+    </div>
+
+    <!-- "Love of Pictures" Polaroid Photo Gallery Section -->
+    <section id="photo-gallery" class="photo-gallery hidden">
+        <div class="gallery-header">
+            <h2 class="gallery-title">Our Love in Pictures 💕</h2>
+            <p class="gallery-subtitle">Moments captured, forever treasured</p>
+        </div>
+        
+        <div class="polaroid-grid" id="polaroid-grid">
+            <!-- Polaroid Cards will be dynamically populated by JS -->
+        </div>
+
+        </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox hidden">
+        <div class="lightbox-overlay" id="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <span class="close-lightbox" id="close-lightbox">&times;</span>
+            <img id="lightbox-img" src="" alt="Full view">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <div id="copy">
+        <p class="credit">
+            Crafted by
+            <a href="https://www.instagram.com/s.n.ovi/" target="_blank" rel="noopener noreferrer">S.N.Ovi</a>
+        </p>
+    </div>
+
+    <script type="text/javascript" src="js/love.js"></script>
+
+</body>
+</html>
